@@ -1,8 +1,0 @@
-services:
-  webtop:
-    image: lscr.io/linuxserver/webtop:debian-xfce
-    container_name: debian_gui
-    privileged: true
-    ports:
-      - "6080:3000"
-    shm_size: "1gb"
