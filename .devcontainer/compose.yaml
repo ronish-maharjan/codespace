@@ -1,0 +1,23 @@
+services:
+  webtop:
+    image: lscr.io/linuxserver/webtop:debian-xfce
+
+    container_name: linux-desktop
+
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Kathmandu
+
+    ports:
+      - "6080:3000"
+
+    volumes:
+      - webtop_config:/config
+
+    shm_size: "1gb"
+
+    restart: unless-stopped
+
+volumes:
+  webtop_config:
